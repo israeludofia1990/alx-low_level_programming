@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main: print all lowercase alphabets except e and q
+ * main -  print all lowercase alphabets except e and q
  *
- * return: 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
@@ -11,7 +11,7 @@ int main(void)
 	while (low <= 'z')
 	{
 		if (low != 'e' && low != 'q')
-	 	{
+		{
 			putchar(low);
 		}
 		low++;
