@@ -24,4 +24,5 @@ int main(void)
 		numb++;
 	}
 	printf("%lu\n", sum_even);
+	return (0);
 }
