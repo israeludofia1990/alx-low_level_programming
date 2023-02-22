@@ -11,7 +11,7 @@ int main(void)
 	unsigned long sum_even;
 	int numb = 0;
 
-	while (numb < 50)
+	while (numb < 10)
 	{
 		c = a + b;
 		a = b;
