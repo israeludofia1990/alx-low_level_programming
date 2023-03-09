@@ -10,8 +10,11 @@ int helper_sqrt(int n, int a);
  */
 int _sqrt_recursion(int n)
 {
-	if ((n <= 0) || (n == 1))
+	if (n <= 0)
+		return (-1);
+	else if (n == 1)
 		return (n);
+
 	else
 		return (helper_sqrt(n, 1));
 }
