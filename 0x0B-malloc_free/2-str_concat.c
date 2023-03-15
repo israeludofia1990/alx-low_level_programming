@@ -18,9 +18,9 @@ char *str_concat(char *s1, char *s2)
 	char *empty = "";
 
 /** if the content of s1 and s2 is NULL treat as empty string */
-	if (s1 == NULL)
+	if (*s1 == NULL)
 		s1 = empty;
-	if (s2 == NULL)
+	if (*s2 == NULL)
 		s2 = empty;
 
 /** get the length of s1 and s2 */
@@ -34,7 +34,8 @@ char *str_concat(char *s1, char *s2)
 
 /** newly alocated space in memory*/
 	s3 = (char *)malloc(sizeof(char) * size);
-
+	if (s3 == NULL)
+		return (0);
 /** copy content of s1 into s3 */
 	for (i = 0; i < s1_length; i++)
 		s3[i] = s1[i];
