@@ -15,12 +15,13 @@ char *str_concat(char *s1, char *s2)
 	int size;
 	int i;
 	char *s3;
+	char *empty = "";
 
 /** if the content of s1 and s2 is NULL treat as empty string */
 	if (s1 == NULL)
-		s1 = '\0';
+		s1 = empty;
 	if (s2 == NULL)
-		s2 = '\0';
+		s2 = empty;
 
 /** get the length of s1 and s2 */
 	s1_length = 1;
