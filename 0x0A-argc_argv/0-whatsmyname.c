@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - prints program name
  * @argc: argument count
@@ -7,7 +7,13 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%s\n", argv[0]);
+	int i = 0;
+
+	for (; argv[0][i] != '\0'; i++)
+	{
+		_putchar(argv[0][i]);
+	}
+	_putchar('\n');
 
 	return (0);
 }
