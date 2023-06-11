@@ -10,8 +10,8 @@ int main(int argc __attribute__((unused)), char *argv[])
 {
 	int add = 0;
 	int i = 1;
-	int j;
 	char *tmp;
+	int num;
 
 	if (argc == 1)
 	{
@@ -21,17 +21,15 @@ int main(int argc __attribute__((unused)), char *argv[])
 	for (; i < argc; i++)
 	{
 		tmp = argv[i];
-		for (j = 0; tmp[j] != '\0'; j++)
+		num = atoi(tmp);
+		if (num == 0 && tmp[0] != '\0')
 		{
-			if (tmp[j] < '0' || tmp[j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				add += atoi(&tmp[j]);
-			}
+			printf("Error: \n");
+			return (1);
+		}
+		else
+		{
+			add += num;
 		}
 	}
 	printf("%d\n", add);
