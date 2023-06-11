@@ -5,6 +5,7 @@ int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
+int calculate_2pennies(int cents);
 /**
  * main - returns maximum coins to make change
  * @argc: argument count
@@ -17,6 +18,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	int quarters;
 	int dimes;
 	int nickels;
+	int double_pennies;
 	int pennies;
 	int coins = 0;
 
@@ -44,11 +46,15 @@ int main(int argc __attribute__((unused)), char *argv[])
 	nickels = calculate_nickels(cents);
 	cents = cents - nickels * 5;
 
+	/** calculate number of 2pennies to givt the customer */
+	double_pennies = calculate_2pennies(cents);
+	cents = cents - double_pennies * 2;
+
 	/** Calculate the number of pennies to give the customer */
 	pennies = calculate_pennies(cents);
 	cents = cents - pennies * 1;
 
-	coins += quarters + dimes + nickels + pennies;
+	coins += quarters + dimes + nickels + pennies + double_pennies;
 	printf("%d\n", coins);
 
 	return (0);
@@ -95,6 +101,21 @@ int calculate_nickels(int cents)
 	for (count = 0; cents >= 5; count++)
 	{
 		cents = cents - 5;
+	}
+	return (count);
+}
+/**
+ * calculate_2pennies - calculates 2 coins
+ * @cents: user input
+ * Return: integer
+ */
+int calculate_2pennies(int cents)
+{
+	int count;
+
+	for (count = 0; cents >= 2; count++)
+	{
+		cents = cents - 2;
 	}
 	return (count);
 }
