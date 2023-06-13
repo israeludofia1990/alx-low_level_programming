@@ -2,6 +2,24 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
+ * _str_len - returns length of string
+ * @str: input string
+ * Return: integer
+*/
+int _str_len(char *str)
+{
+	char *tmp;
+	int len = 0;
+
+	tmp = str;
+	while (*tmp != '\0')
+	{
+		len++;
+		tmp++;
+	}
+	return (len);
+}
+/**
  * str_concat - concatenates 2 strings
  * @s1: destination string
  * @s2: source string
@@ -38,21 +56,4 @@ char *str_concat(char *s1, char *s2)
 	new_space[i + j] = '\0';
 	return (new_space);
 }
-/**
- * _str_len - returns length of string
- * @str: input string
- * Return: integer
-*/
-int _str_len(char *str)
-{
-	char *tmp;
-	int len = 0;
 
-	tmp = str;
-	while (*tmp != '\0')
-	{
-		len++;
-		tmp++;
-	}
-	return (len);
-}
