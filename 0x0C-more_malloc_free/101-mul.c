@@ -22,9 +22,9 @@ bool _isdigit(int c)
  * @b: number to test
  * Return: mul
  */
-int mul(int a, int b)
+int mul(unsigned int a, unsigned  int b)
 {
-	int product = a * b;
+	unsigned product = a * b;
 
 	return (product);
 }
