@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * free_list - deletes node
+ * free_listint - deletes node
  * @head: head
  * Return: nothing
  */
