@@ -1,3 +1,8 @@
+#include <stddef.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
 /**
  * main - copys file from source to destination
  * @ac: argument count
