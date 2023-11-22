@@ -1,7 +1,6 @@
 #include "m.h"
 
 /**
- * will this really work?
  * print_school
  *
  * Return: Nothing
